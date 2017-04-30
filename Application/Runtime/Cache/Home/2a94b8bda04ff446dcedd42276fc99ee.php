@@ -436,10 +436,12 @@
         */
 		$(".target2").change(function(e) {
             
-            url = SCOPE.goal_url;
-            data = {1:e.target.value}
-            //alert(data[1])
-            $.post(url,data[1], function(result) {
+            url = SCOPE.goal_url;	
+			postData = { };
+			postData[native] = e.target.value;
+            //data = e.target.value;
+            alert(e.target.value);
+            $.post(url,data, function(result) {
                 alert(result)
             },"JSON");
         });
