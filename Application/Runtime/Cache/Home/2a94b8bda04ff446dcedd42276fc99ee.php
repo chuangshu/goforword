@@ -292,7 +292,7 @@
             <form method="post" id="content">
                 <div class="col-md-4 col-sm-4">
                     <div style="display:inline" class="dropdown animate-box">
-                        <select class="target2" name="target2">
+                        <select class="target2 form-control" name="target2">
                             <option value="english" selected="selected" name="english">english</option>
                             <option value="chinese" name="english">chinese</option>
                             <option value="japanese" name="japanese">japanese</option>
@@ -302,18 +302,20 @@
 
                 <div class="col-md-4 col-sm-4">
                     <div style="display:inline" class="dropdown animate-box">
-                        <select class="target3" name="target3" id="goal">
+                        <select class="target3 form-control" name="target3" id="goal">
                             <!--<option value="english">english</option>
                             <option value="闽南话">闽南话</option>-->
                         </select>
                     </div>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block animate-box" id ="check" type="button" onclick="login.check()" >查询</button>
+				<div class="col-md-4 col-sm-4">
+                	<button class="btn btn-lg btn-primary btn-block animate-box" id ="check" type="button" onclick="login.check()" >查询</button>
+				</div>
             </form>
         </div>
 	
 		<div class="row">
-				<div class="col-md-4 col-sm-6">
+				<div class="col-md-3 col-sm-6">
 					<div class="price-box animate-box" data-animate-effect="fadeIn">
 						<h2 class="pricing-plan">实用级</h2>
 						<div class="price"><sup class="currency">$</sup><span id = "primary"></span><small>/mo</small></div>
@@ -324,7 +326,7 @@
 						<a href="#" class="btn btn-default btn-sm">Get started</a>
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-6">
+				<div class="col-md-3 col-sm-6">
 					<div class="price-box animate-box" data-animate-effect="fadeIn">
 						<h2 class="pricing-plan">标准级</h2>
 						<div class="price"><sup class="currency" >$</sup><span id = "middle"></span><small>/mo</small></div>
@@ -337,10 +339,22 @@
 					</div>
 				</div>
 				<div class="clearfix visible-sm-block"></div>
-				<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeIn">
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeIn">
 					<div class="price-box popular">
 						<h2 class="pricing-plan">出版级</h2>
 						<div class="price"><sup class="currency">$</sup><span id = "senior"></span><small>/mo</small></div>
+						<p>Basic customer support for small business</p>
+						<hr>
+						<p>
+							如果您在下单时选择出版级，您得到的译文语言优美，专业术语翻译精准，全部译文均经过资深译员或行业领域专家 (SME) 的校审。适用于网站、软件界面、标书、合同及定向行业领域内的专业资料翻译。出版级订单由具有 7 年以上相关行业翻译经验的译员处理。
+						</p>
+						<a href="#" class="btn btn-primary btn-sm">Get started</a>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeIn">
+					<div class="price-box popular">
+						<h2 class="pricing-plan">创译级</h2>
+						<div class="price"><sup class="currency">$</sup><span id = "highest"></span><small>/mo</small></div>
 						<p>Basic customer support for small business</p>
 						<hr>
 						<p>
@@ -411,28 +425,6 @@
 	</script>
 
     <script type="text/javascript">
-       /* 
-
-        $(".target3").change(function(e) {
-            url = "http://test.php";
-            data = {1:e.target.value}
-            alert(data[1])
-            $.post('get.php',data, function(result) {
-                alert(result)
-            },"JSON");
-        });*/
-/*
-        $("#check").click(function(e) {
-            url = "http://get.php";
-            native =document.getElementsByClassName("target2").value;
-            goal = document.getElementsByClassName("target3").value;
-            data = {0:goal,1:native}
-            alert(data[0])
-            $.post('get.php',data, function(result) {
-                alert(result)
-            },"JSON");
-        })
-        */
 		$(".target2").change(function(e) {
             
 			var data = $("#content").serializeArray();
@@ -470,6 +462,7 @@
               $("#primary").text(result.primary);
 			  $("#middle").text(result.middle);
 			  $("#senior").text(result.senior);
+			  $("#highest").text(result.highest);
            },'JSON');
        });
     </script>
