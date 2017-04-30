@@ -437,8 +437,8 @@
 		$(".target2").change(function(e) {
             
             url = SCOPE.goal_url;
-            data = {native:e.target.value}
-            alert(data[native]);
+            data = {1:e.target.value}
+            alert(data[1]);
             $.post(url,data[1], function(result) {
                 alert(result)
             },"JSON");
