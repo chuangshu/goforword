@@ -455,7 +455,7 @@
            url = SCOPE.check_url;
 
            $.post(url,postData,function(result) {
-               alert(result);
+               alert(result[0][primary]);
            },'JSON');
        });
     </script>
