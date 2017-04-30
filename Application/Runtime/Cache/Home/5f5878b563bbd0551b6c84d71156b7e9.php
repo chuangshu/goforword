@@ -450,12 +450,12 @@
                postData[this.name] = this.value;
            });
 
-            //alert(postData['target2'])
-           //alert(postData['target3'])
+            alert(postData['target2'])
+           alert(postData['target3'])
            url = SCOPE.check_url;
 
            $.post(url,postData,function(result) {
-               alert(result[0][primary]);
+               alert(result);
            },'JSON');
        });
     </script>
