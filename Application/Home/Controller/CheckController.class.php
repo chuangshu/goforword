@@ -23,6 +23,13 @@ class CheckController extends Controller{
 		return json_encode($res[0]);
         
 	}
+
+	public function native(){
+		$native = $_POST['native'];
+		$goal = array();
+		$goal = D("Check")->native($native);
+		return json_encode($res[0]);
+	}
 		
 }
 

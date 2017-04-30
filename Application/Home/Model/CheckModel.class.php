@@ -17,4 +17,10 @@ class CheckModel extends  Model {
     	$res = $this->_db->where($data)->select();
     	return $res;
     }
+    
+    public function native($native){
+        $res = $this->_db->where('native='$native)->select();
+        print_r($res);exit;
+        return $res;
+    }
 }
