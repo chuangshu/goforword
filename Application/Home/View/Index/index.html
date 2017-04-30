@@ -436,12 +436,21 @@
         */
 		$(".target2").change(function(e) {
             
-            url = SCOPE.goal_url;
-            data = {1:e.target.value}
-            alert(data[1]);
-            $.post(url,data[1], function(result) {
-                alert(result)
-            },"JSON");
+			var data = $("#content").serializeArray();
+           //console.log(data);
+           postData = { };
+           $(data).each(function(i){
+               postData[this.name] = this.value;
+           });
+
+           url = SCOPE.check_url;
+
+           $.post(url,postData,function(result) {
+
+			   alert(result.goal);
+              
+			 // $("#senior").text(result.senior);
+           },'JSON');
         });
 
        $("#check").click(function()	{

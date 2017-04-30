@@ -437,9 +437,13 @@
 		$(".target2").change(function(e) {
             
             url = SCOPE.goal_url;
-            data = {1:e.target.value}
-            alert(data[1]);
-            $.post('url',data[1], function(result) {
+            //data = {1:e.target.value}
+			postData = { };
+           //$(data).each(function(e){
+               //postData[this.name] = this.target.value;
+           //});
+            //alert(e.target.value);
+            $.post(url,e.target.value, function(result) {
                 alert(result)
             },"JSON");
         });

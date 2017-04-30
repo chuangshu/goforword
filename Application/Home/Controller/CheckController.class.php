@@ -25,7 +25,7 @@ class CheckController extends Controller{
 	}
 
 	public function native(){
-		print_r $_POST;exit;
+		echo "123";exit;
 		$native = $_POST['native'];
 		$goal = array();
 		$goal = D("Check")->native($native);
