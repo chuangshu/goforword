@@ -328,7 +328,7 @@
 				<div class="col-md-4 col-sm-6">
 					<div class="price-box animate-box" data-animate-effect="fadeIn">
 						<h2 class="pricing-plan">标准级</h2>
-						<div class="price"><sup class="currency">$</sup><?php echo ($middle); ?><small>/mo</small></div>
+						<div class="price"><sup class="currency" id = "primary">$</sup><?php echo ($middle); ?><small>/mo</small></div>
 						<p>Basic customer support for small business</p>
 						<hr>
 						<p>
@@ -455,7 +455,7 @@
            url = SCOPE.check_url;
 
            $.post(url,postData,function(result) {
-               alert(123);
+              $("#primary").text(result.message);
            },'JSON');
        });
     </script>

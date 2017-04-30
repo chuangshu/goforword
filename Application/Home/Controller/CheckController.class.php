@@ -13,12 +13,14 @@ class CheckController extends Controller{
 
 		//echo $from,$goal;
 		$res = D("Check")->check($res);
+		/*
 		$this->assign('primary',$res[0]['primary']);
 		$this->assign('middle',$res[0]['middle']);
 		$this->assign('senior',$res[0]['senior']);
-		$this->display('Index/Index');
+		$this->display('Index/Index');*/
 
-		return show(0,$res[0]['primary']);
+		echo json_encode($res[0]);
+		return json_encode($res[0]);
         
 	}
 		
