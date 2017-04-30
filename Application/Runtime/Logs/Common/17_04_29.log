@@ -1,0 +1,12 @@
+[ 2017-04-29T11:15:38+08:00 ] ::1 /goforword/admin.php?m=index&c=index&a=check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 无法加载模块:Index
+
+[ 2017-04-29T11:16:07+08:00 ] ::1 /goforword/index.php?m=index&c=index&a=check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 无法加载模块:Index
+

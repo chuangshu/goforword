@@ -1,13 +1,7 @@
 <?php
 namespace Home\Model;
 use Think\Model;
-/**
- * Created by PhpStorm.
- * User: rehellinen
- * Date: 2017/4/21
- * Time: 9:10
- */
-class IndexModel extends  Model {
+class CheckModel extends  Model {
     private $_db = '';
 
     public function __construct()
