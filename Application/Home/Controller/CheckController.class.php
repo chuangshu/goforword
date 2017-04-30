@@ -18,7 +18,7 @@ class CheckController extends Controller{
 		$this->assign('senior',$res[0]['senior']);
 		$this->display('Index/Index');
 
-		return $res[0]['primary'];
+		return show(0,$res[0]['primary']);
         
 	}
 		
