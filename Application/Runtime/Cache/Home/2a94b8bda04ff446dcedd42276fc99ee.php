@@ -281,7 +281,7 @@
 					<h2 class="animate-box" data-animate-effect="fadeIn">Price</h2>
 					<div class="row animate-box" data-animate-effect="fadeIn">
 						<div class="col-md-8 col-md-offset-2 subtext">
-							<h3>您每次下单，皆雅都会同时提供三种质量级别对应的价格。您可以结合自己的实际需求选择适合您的翻译质量级别和对应报价，让每一分钱都花在刀刃上，打造极致性价比。皆雅缩短了翻译供应链，去除中间商赚差价，让您用最少的钱换来最合适的译稿。皆雅承诺，比同质量传统翻译供应商节省 30% 成本。</h3>
+							<h3>您每次下单，皆雅都会同时提供三种质量级别对应的价格。您可以结合自己的实际需求选择适合您的翻译质量级别和对应报价，让每一分钱都花在刀刃上，打造极致性价比。皆雅缩短了翻译供应链，去除中间商赚差价，让您用最少的钱换来最合适的译稿。皆雅承诺，比同质量传统翻译供应商节省 30% 成本。（价目表中没有的翻译类型请直接联系	）</h3>
 						</div>
 				</div>
 			</div>
@@ -292,19 +292,25 @@
             <form method="post" id="content">
                 <div class="col-md-4 col-sm-4">
                     <div style="display:inline" class="dropdown animate-box">
-                        <select class="target2 form-control" name="target2">
-                            <option value="english" selected="selected" name="english">english</option>
-                            <option value="chinese" name="english">chinese</option>
-                            <option value="japanese" name="japanese">japanese</option>
+                        <select class="target2 form-control animate-box" name="target2" style="margin-bottom: 15px;">
+                            <option value="中文"  name="chinese">中文</option>
+							<option value="英语" name="english">英语</option>
+                            <option value="韩语" name="korean">韩语</option>
+                            <option value="德语" name="german">德语</option>
+							<option value="法语" name="french">法语</option>
+							<option value="俄语" name="russian">俄语</option>
+							<option value="西班牙语" name="spanish">西班牙语</option>
+							<option value="意大利语" name="italian">意大利语</option>
+							<option value="日语" selected="selected" name="japanese">日语</option>
+
                         </select>
                     </div>
                 </div>
 
                 <div class="col-md-4 col-sm-4">
                     <div style="display:inline" class="dropdown animate-box">
-                        <select class="target3 form-control" name="target3" id="goal">
-                            <!--<option value="english">english</option>
-                            <option value="闽南话">闽南话</option>-->
+                        <select class="target3 form-control animate-box" name="target3" id="goal" style="margin-bottom: 15px;">
+							<option value="日语" selected="selected" name="japanese">中文</option>
                         </select>
                     </div>
                 </div>
@@ -318,7 +324,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="price-box animate-box" data-animate-effect="fadeIn">
 						<h2 class="pricing-plan">实用级</h2>
-						<div class="price"><sup class="currency">$</sup><span id = "primary"></span><small>/mo</small></div>
+						<div class="price"><sup class="currency">￥</sup><span id = "primary">150-180</span><small>/千字</small></div>
 						<hr>
 						<p>
 							如果您在下单时选择实用级，您得到的译文表达流畅，语义通顺，无低级错误，基本能够体现原文所描述的内容。适用于一般性资料的翻译，满足阅读、参考等使用目的。实用级订单由至少具有 1-3 年翻译经验的译员处理。
@@ -329,8 +335,8 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="price-box animate-box" data-animate-effect="fadeIn">
 						<h2 class="pricing-plan">标准级</h2>
-						<div class="price"><sup class="currency" >$</sup><span id = "middle"></span><small>/mo</small></div>
-						<p>Basic customer support for small business</p>
+						<div class="price"><sup class="currency" >￥</sup><span id = "middle">180-220</span><small>/千字</small></div>
+						
 						<hr>
 						<p>
 							如果您在下单时选择标准级，您得到的译文语义正确无误，另外还会根据行业领域、文体类型等加以润色。适用于偏专业性资料的翻译，如邀请函、用户指南、技术手册、宣传页等。标准级订单由至少具有 3-7 年相关行业翻译经验的译员处理，通过翻译、校审两个流程，尽力确保翻译质量。
@@ -342,8 +348,8 @@
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeIn">
 					<div class="price-box popular">
 						<h2 class="pricing-plan">出版级</h2>
-						<div class="price"><sup class="currency">$</sup><span id = "senior"></span><small>/mo</small></div>
-						<p>Basic customer support for small business</p>
+						<div class="price"><sup class="currency">￥</sup><span id = "senior">220-250</span><small>/千字</small></div>
+						
 						<hr>
 						<p>
 							如果您在下单时选择出版级，您得到的译文语言优美，专业术语翻译精准，全部译文均经过资深译员或行业领域专家 (SME) 的校审。适用于网站、软件界面、标书、合同及定向行业领域内的专业资料翻译。出版级订单由具有 7 年以上相关行业翻译经验的译员处理。
@@ -354,11 +360,11 @@
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeIn">
 					<div class="price-box popular">
 						<h2 class="pricing-plan">创译级</h2>
-						<div class="price"><sup class="currency">$</sup><span id = "highest"></span><small>/mo</small></div>
-						<p>Basic customer support for small business</p>
+						<div class="price"><sup class="currency">￥</sup><span id = "highest">250-280</span><small>/千字</small></div>
+						
 						<hr>
 						<p>
-							如果您在下单时选择出版级，您得到的译文语言优美，专业术语翻译精准，全部译文均经过资深译员或行业领域专家 (SME) 的校审。适用于网站、软件界面、标书、合同及定向行业领域内的专业资料翻译。出版级订单由具有 7 年以上相关行业翻译经验的译员处理。
+							如果您在下单时选择创译级，您得到的译文在正确无误的前提下，将能传达您期望的文化信息，达到“意美·形合·音悦”的效果。适用于偏宣传类的翻译，如商标、广告语、公司简介、企划方案、出国留学资料等。创译级订单由至少具有3-7年相关行业创译经验的译员处理，包括翻译、校审两个流程，确保够专业、够个性。
 						</p>
 						<a href="#" class="btn btn-primary btn-sm">Get started</a>
 					</div>
@@ -437,18 +443,15 @@
            url = SCOPE.goal_url;
 
            $.post(url,postData,function(result) {
-				//$(result[e]).each (alert(result.[e].goal))
 			   $(result).each(function(){
 					$("#goal").append('<option value="'+this.goal +'" name= "'+this.goal+'">'+this.goal+'</option>');
 			   });
-			 // $("#senior").text(result.senior);
            },'JSON');
         });
 
        $("#check").click(function()	{
 
            var data = $("#content").serializeArray();
-           //console.log(data);
            postData = { };
            $(data).each(function(i){
                postData[this.name] = this.value;

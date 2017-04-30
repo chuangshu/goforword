@@ -31,7 +31,7 @@ class CheckController extends Controller{
 					 );
 		//echo $from,$goal;
 		$res = D("Check")->check($res);
-		echo json_encode($res);exit;
+		echo json_encode($res);
 		return json_encode($res);
 	}
 		
