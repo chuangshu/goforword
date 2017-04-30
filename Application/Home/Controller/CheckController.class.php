@@ -25,11 +25,14 @@ class CheckController extends Controller{
 	}
 
 	public function native(){
-		echo "123";exit;
-		$native = $_POST['native'];
-		$goal = array();
-		$goal = D("Check")->native($native);
-		return json_encode($res[0]);
+		$res = array( );
+		$res = array(
+						'native' => $_POST['target2'] ,
+					 );
+		//echo $from,$goal;
+		$res = D("Check")->check($res);
+		echo json_encode($res);exit;
+		return json_encode($res);
 	}
 		
 }

@@ -302,10 +302,9 @@
 
                 <div class="col-md-4 col-sm-4">
                     <div style="display:inline" class="dropdown animate-box">
-                        <select class="target3" name="target3">
-                            <option value="chinese" selected="selected">chinese</option>
-                            <option value="english">english</option>
-                            <option value="闽南话">闽南话</option>
+                        <select class="target3" name="target3" id="goal">
+                            <!--<option value="english">english</option>
+                            <option value="闽南话">闽南话</option>-->
                         </select>
                     </div>
                 </div>
@@ -436,16 +435,22 @@
         */
 		$(".target2").change(function(e) {
             
-            url = SCOPE.goal_url;
-            //data = {1:e.target.value}
-			postData = { };
-           //$(data).each(function(e){
-               //postData[this.name] = this.target.value;
-           //});
-            //alert(e.target.value);
-            $.post(url,e.target.value, function(result) {
-                alert(result)
-            },"JSON");
+			var data = $("#content").serializeArray();
+           //console.log(data);
+           postData = { };
+           $(data).each(function(i){
+               postData[this.name] = this.value;
+           });
+			$('#goal').empty();
+           url = SCOPE.goal_url;
+
+           $.post(url,postData,function(result) {
+				//$(result[e]).each (alert(result.[e].goal))
+			   $(result).each(function(){
+					$("#goal").append('<option value="'+this.goal +'" name= "'+this.goal+'">'+this.goal+'</option>');
+			   });
+			 // $("#senior").text(result.senior);
+           },'JSON');
         });
 
        $("#check").click(function()	{
